@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!-- saved from url=(0387)file:///C:/Users/user/Desktop/7%EC%B0%A8-%EC%B5%9C%EC%A2%85%EC%A0%9C%EC%B6%9C%EC%84%9C%EB%A5%98%EC%B7%A8%ED%95%A8-8%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80-desktop/NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C-9%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80/%EC%9D%B8%EB%AC%BC%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C_%EC%9D%BD%EA%B8%B0%EC%89%AC%EC%9A%B4%EB%B2%84%EC%A0%84_20260613.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>인물 분석 보고서 — NH투자증권 CJ E&amp;M 사건</title>
+<style>
+  :root{
+    --navy:#16233f;--navy2:#1f3864;--red:#b3121b;--teal:#0b5a5a;--amber:#8a5a00;
+    --green:#2f6b2f;--slate:#3f4a5a;--gray:#5a5a5a;--ink:#1a1a1a;
+    --line:#dde2ea;--bg:#eef0f4;--zebra:#f5f7fb;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Noto Sans CJK KR","Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);line-height:1.6;margin:0;background:var(--bg);}
+  .wrap{max-width:940px;margin:0 auto;background:#fff;box-shadow:0 1px 10px rgba(0,0,0,.1);}
+  .hero{background:var(--navy);color:#fff;padding:42px 50px 34px;}
+  .hero .k{color:#9fb4d8;font-size:13px;letter-spacing:3px;font-weight:700;margin:0 0 10px;}
+  .hero h1{font-size:28px;line-height:1.3;margin:0 0 6px;font-weight:800;}
+  .hero .meta{color:#cdd6e6;font-size:13.5px;margin:8px 0 0;}
+  /* case path */
+  .path{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;}
+  .path .p{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:7px;padding:7px 12px;font-size:12.5px;color:#eaf0fa;}
+  .path .p b{color:#fff;}
+  .path .ar{align-self:center;color:#7f97c2;font-weight:800;}
+  .sec{padding:24px 50px;}
+  h2{font-size:19px;margin:4px 0 4px;display:flex;align-items:center;gap:9px;}
+  h2 .bar{width:6px;height:20px;border-radius:3px;background:var(--navy2);display:inline-block;}
+  .desc{font-size:13.5px;color:var(--gray);margin:0 0 14px;}
+  .notice{background:#fff8ec;border-left:5px solid var(--amber);padding:13px 16px;border-radius:4px;font-size:13px;color:#5d3f00;margin:0 0 6px;}
+  /* person card */
+  .people{display:grid;gap:10px;}
+  .pc{border:1px solid var(--line);border-left-width:5px;border-radius:9px;padding:13px 16px;background:#fff;}
+  .pc .top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:4px;}
+  .pc .nm{font-size:16px;font-weight:800;color:var(--ink);}
+  .pc .role{font-size:12px;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--zebra);color:var(--slate);border:1px solid var(--line);}
+  .pc .r{font-size:13.5px;color:#2c2c2c;margin:3px 0;}
+  .pc .a{font-size:13px;color:#444;margin:4px 0 0;}
+  .pc .a .law{color:var(--navy2);font-weight:700;}
+  .pc .a .ev{color:var(--red);font-weight:700;}
+  /* color variants */
+  .c-victim{border-left-color:var(--teal);} .c-victim .nm{color:var(--teal);}
+  .c-core{border-left-color:var(--red);background:#fff6f6;} .c-core .nm{color:var(--red);}
+  .c-nh{border-left-color:var(--navy2);} .c-nh .nm{color:var(--navy2);}
+  .c-law{border-left-color:var(--gray);} .c-law .nm{color:var(--gray);}
+  .c-court{border-left-color:var(--slate);} .c-court .nm{color:var(--slate);}
+  .c-fss{border-left-color:var(--amber);} .c-fss .nm{color:var(--amber);}
+  .c-etc{border-left-color:var(--green);} .c-etc .nm{color:var(--green);}
+  h2.t-victim .bar{background:var(--teal);} h2.t-core .bar{background:var(--red);}
+  h2.t-nh .bar{background:var(--navy2);} h2.t-law .bar{background:var(--gray);}
+  h2.t-court .bar{background:var(--slate);} h2.t-fss .bar{background:var(--amber);}
+  h2.t-etc .bar{background:var(--green);}
+  /* quotes */
+  .qcard{border:1px solid var(--line);border-radius:9px;padding:14px 16px;margin:0 0 12px;background:#fff;}
+  .qcard .qh{font-weight:800;color:var(--navy2);font-size:14.5px;margin-bottom:8px;}
+  .qcard .qh.red{color:var(--red);}
+  .qcard .ql{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0;}
+  .qcard .ql .t{font-style:italic;color:#222;font-size:13.6px;}
+  .qcard .ql .s{display:block;font-size:11.8px;color:var(--gray);margin-top:3px;}
+  /* chain */
+  .chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:7px;margin:6px 0 0;}
+  .chain .n{flex:1;min-width:104px;background:var(--navy);color:#fff;border-radius:8px;padding:10px 8px;text-align:center;}
+  .chain .n .s{font-size:11.5px;color:#9fb4d8;font-weight:700;}
+  .chain .n .t{font-size:13px;font-weight:700;margin-top:2px;line-height:1.3;}
+  .chain .n.red{background:var(--red);} .chain .n.red .s{color:#ffd2d2;}
+  .chain .ar{align-self:center;color:var(--red);font-weight:800;font-size:18px;}
+  .foot{padding:20px 50px 38px;color:var(--gray);font-size:12px;border-top:1px solid var(--line);}
+  @media(max-width:700px){.sec,.hero,.foot{padding-left:20px;padding-right:20px;}.hero h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="k">인 물 분 석 보 고 서</p>
+    <h1>NH투자증권 CJ E&amp;M 사건<br>— 등장 인물 전원 분석</h1>
+    <p class="meta">이름 · 직책 · 역할 · 법적/도덕적 분석 &nbsp;|&nbsp; 작성: 김성만 &nbsp;|&nbsp; 기준일: 2026. 6. 13.<br><span style="color:#ffd2a8;">핵심 녹취 보강판 — 김연희(비서실)·송지훈(후임 지점장)·최경옥(알리바이)·유승훈(후임 담당자·누락녹취 제공) 추가</span></p>
+    <div class="path">
+      <span class="p">1심 <b>서울남부지법 2022가합108719</b></span><span class="ar">→</span>
+      <span class="p">항소심 <b>서울고법 2023나2052728</b></span><span class="ar">→</span>
+      <span class="p">상고심 <b>대법원 2024다321102</b></span>
+    </div>
+  </header>
+
+  <section class="sec">
+    <div class="notice"><b>표기 원칙</b> — 법관·금감원 직원 등 공적 지위자는 직무상 판단·처리 사실만 중립적으로 기재(인격 비난 없음). 가해로 지목된 인물도 ‘허위’ 등 단정은 <b>법원 확정이 있는 경우로만</b> 하고, 그 외는 ‘배치/모순/(평가)’로 적습니다. 발언은 채록 원문을 «인용», 분석자(김성만)의 의견은 ‘(평가)’로 구분합니다. 이는 명예훼손·무고 위험으로부터 작성자를 보호하기 위한 서술 원칙입니다.</div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-victim"><span class="bar"></span>1. 피해자(원고) 측</h2>
+    <div class="people">
+      <div class="pc c-victim"><div class="top"><span class="nm">김성만</span><span class="role">원고·고소인 / NH 30년 고객</span></div>
+        <div class="r">1989년 계좌개설, 2003년~ CJ E&amp;M 60,000주 적립. 사건 피해 당사자, 8년간 자료·녹취 정리.</div>
+        <div class="a"><span class="law">법원:</span> 이정미의 오안내로 매도기회 상실·손해 발생은 인정되나 인과관계·합의서 효력에서 패소. (평가) 95,000원 확정·전보를 먼저 제안한 쪽이 본인이라는 점이 1심 판결문에 인정사실로 남음.</div></div>
+      <div class="pc c-victim"><div class="top"><span class="nm">이정식</span><span class="role">변호사 / 1심 원고 대리인</span></div>
+        <div class="r">2022가합108719 소장·준비서면 작성·제출.</div>
+        <div class="a">(평가) 부제소합의·기준시점 쟁점에서 1심 각하를 막지 못함. 직무수행 영역 — 인격적 평가 대상 아님.</div></div>
+      <div class="pc c-victim"><div class="top"><span class="nm">이종건 · 김준한 · 김광녕</span><span class="role">법무법인 청린 / 항소·상고심 대리인</span></div>
+        <div class="r">항소이유서·청구취지 변경(양도세 손해 철회 → 2018.12.27 기준 손실로 확장)·상고이유서.</div>
+        <div class="a">(평가) 항소심에서 ‘신의성실의무 위반’ 인정과 ‘부제소합의 양도세 한정’을 끌어냄. 금반언·모순 주장 명시는 부족.</div></div>
+      <div class="pc c-victim"><div class="top"><span class="nm">박인구</span><span class="role">공인회계사·세무사 / 원고 세무대리인</span></div>
+        <div class="r">원심에 진술서 제출(2023.10.30). 2016년 이정미의 양도세 신고대행, 1/18 당일 통화, 면책합의서로 변호사 수임거절 경위 증언.</div>
+        <div class="a">(평가) 피고의 ‘단순 정보전달’ 주장을 무너뜨리는 제3자 진술. 피고는 유리한 한 줄만 선택 인용(서면 S11/⑥).</div></div>
+      <div class="pc c-victim"><div class="top"><span class="nm">이미현</span><span class="role">원고 30년 지기 / 진정인</span></div>
+        <div class="r">진정서 제출(2023.10.30). 협의금리 경위·매도계획 무산 정황 증언.</div>
+        <div class="a">(평가) 사건 경위의 정황 보강. 직접 이해관계 없는 제3자 진술.</div></div>
+      <div class="pc c-victim"><div class="top"><span class="nm">최경옥</span><span class="role">자녀 ‘빨간펜’ 교사 / 알리바이 증인</span></div>
+        <div class="r">2023.6.19 통화. 2019.2.21 오후 4시40분경 김성만이 자녀 수업에 참관 중이었음을 확인 — 피고의 ‘사무실 2시간 체류’ 주장을 반박.</div>
+        <div class="a"><span class="ev">스모킹건:</span> “항상 계셨어요”라는 제3자 확인 + 수업기록·구글 타임라인 = ‘70여 장 2시간 설명’의 물리적 불가능성 입증 단서.</div></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-core"><span class="bar"></span>2. 가해 행위의 핵심 2인</h2>
+    <div class="people">
+      <div class="pc c-core"><div class="top"><span class="nm">이정미</span><span class="role">전 구미WM센터 부장(차장) / 담당 PB</span></div>
+        <div class="r">양도세 오안내 → ‘회복 시 보상’ 약속 → 12월 매도(키인) 유도 → 면책합의서 작성. 사건 전 과정의 실행자.</div>
+        <div class="a"><span class="law">법원:</span> 부정확한 과세정보 전달 = 신의성실의무 위반 인정(항소심). (평가) 약속→부인, 유도→귀책의 반복. 합의서 작성 주체.</div></div>
+      <div class="pc c-core"><div class="top"><span class="nm">임진기</span><span class="role">전 구미WM센터 센터장(지점장)</span></div>
+        <div class="r">확정(픽스) 거부 → ‘결과물 나와야’ 손실확정 유도 → ‘이정미 개인 문제로 무마’ → 2,000만 합의 종용.</div>
+        <div class="a"><span class="law">법원:</span> 임진기에 대한 청구는 증거부족 기각. (평가) ‘픽스가 제일 깔끔’ 인정 후 본인은 거부 — 자기모순. 분쟁 설계의 중심.</div></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-nh"><span class="bar"></span>3. NH투자증권 — 임원·관리자·직원·본사</h2>
+    <div class="people">
+      <div class="pc c-nh"><div class="top"><span class="nm">정영채</span><span class="role">대표이사(1심 당시)</span></div>
+        <div class="r">사용자(법인)의 대표. 소장 피고 회사 대표자로 기재.</div>
+        <div class="a">(평가) 직접 행위자는 아니나 조직 책임의 정점. 사용자책임의 귀속 주체.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">윤병운</span><span class="role">대표이사(상고심~현재)</span></div>
+        <div class="r">2026.1.13자 내용증명 수신자. 사건 인식 후 자체 감찰·시정 부작위 지적 대상.</div>
+        <div class="a">(평가) 상법 §401(이사의 제3자 책임) 적용 검토 대상. ‘꼬리 자르기’ 차단을 위한 개인 책임 적시 대상.</div></div>
+      <div class="pc c-core"><div class="top"><span class="nm">송지훈</span><span class="role">전 구미WM센터 후임 지점장(센터장) · 승계자</span></div>
+        <div class="r">2020.8.7 대면에서 합의서 기망·교체매매(자전매매) 지시·금소부 무마의 전모를 직접 청취하고도 회사 방어논리를 그대로 반복.</div>
+        <div class="a"><span class="ev">신규 핵심:</span> ‘다 팔았으면 문제없다’식 <b>인과관계 단절 프레임을 반복·묵인</b> — 부작위에 의한 가담(방조)·작위의무(내부통제기준) 위반 검토 대상. 후일 판결 ‘인과관계 단절’ 논리의 내부 기원.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">김연희</span><span class="role">WM본부장(이용한 상무) 비서실 직원</span></div>
+        <div class="r">2018.1.29·31 통화 상대. 김성만의 본사 보고 통로. 1.29 통화에서 김성만은 ‘지점이 책임을 개인(이정미)에게 떠넘긴다’, ‘센터가 민원을 묻어가려 해 손해만 커진다’고 호소.</div>
+        <div class="a"><span class="ev">신규 핵심:</span> <b>본사·임원이 2018년 1월 시점에 사건을 인지</b>(‘센터 차원 일탈’ 주장과 배치). 동시에 <b>회사가 법인 책임을 회피하고 이정미 개인에게 배상받으라 떠넘긴 정황</b>, <b>민원 미처리로 발생시점부터 손해가 확대된 정황</b>의 출발점.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">유승훈 (차장)</span><span class="role">NH 영남지역본부 / 이정미 교체 후 후임 담당자·승계 창구</span></div>
+        <div class="r">신의를 저버린 이정미의 담당 해제(교체) 통보 후 사건 관리 승계 창구. ① 2022.8 회사가 ‘미필적 고의로 누락’했던 2018년 비서실(김연희)·2020년 이정미 본인 통화 녹취를 요청받아 제공, ② 2024.11 <b>카카오톡</b>으로 공개매수청구·신용 현금상환·장외거래 문의에 응답, ③ 2025.7~8 회사의 소송비용 청구(법무법인 세한 내용증명·부실채권 자산관리부) 전달. (녹취 표기상 ‘유승민’으로 채록)</div>
+        <div class="a"><span class="ev">신규 핵심:</span> 유승훈이 제공한 ‘누락 녹취 목록’은 <b>회사가 보유 녹취를 빠뜨려 온 ‘증거 누락’ 정황의 직접 자료</b>. “밑에 부서들은 서로 책임회피하려 한다”는 내부자 발언으로 조직적 책임회피를 자인. (평가) 승계 담당자 본인은 직무수행 영역이나, 누락 녹취 제공·책임회피 인정·소송비용 청구(2차 가해 정황)는 회사에 불리한 핵심 정황.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">고유찬</span><span class="role">전 대구지역본부장(상무)</span></div>
+        <div class="r">1/18 사건 당일 이정미의 보고선(서면 주장). 민원 무마 직무유기 내용증명 수신(2020.8.31).</div>
+        <div class="a">(평가) ‘당일 보고’ 진위(서면 S1)의 한 축. 보고 라인상 인식 여부 규명 대상.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">이용한</span><span class="role">전 서울WM전략본부장(상무)</span></div>
+        <div class="r">2018.1.29·31 비서실 통화 상대. 회사가 ‘비서실 녹취 불가’ 주장. 민원 무마 경고 내용증명 수신.</div>
+        <div class="a">(평가) 임원 통화 녹취 존부 다툼의 중심. 보존·제공 의무 쟁점.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">전홍열</span><span class="role">감사(감사위원)</span></div>
+        <div class="r">2020.8 이정미·임진기·고유찬·이용한 감사요청 내용증명 수신.</div>
+        <div class="a">(평가) 감사 책임자로서 조사 착수 여부가 조직 자정의 시금석.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">박철 · 박상호</span><span class="role">준법감시(준법위원회 포함)</span></div>
+        <div class="r">2020.9 공개 경고 내용증명 7인 수신자에 포함.</div>
+        <div class="a">(평가) 준법감시 기능 작동 여부 — 내부통제 쟁점.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">신정대</span><span class="role">컴플라이언스부 차장</span></div>
+        <div class="r">녹취 자료 제공 거부(‘임원 비서실은 녹취 안 된다’)·30년 전 도장 요구 등 자료청구 대응.</div>
+        <div class="a">(평가) ‘원본 미보유’ 주장과 자체 녹취록 작성 사실의 긴장(서면 S5/⑤). 증거제공 쟁점의 실무 담당.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">배성진</span><span class="role">컴플라이언스 담당(2022)</span></div>
+        <div class="r">2022.8~9 민원 대응 통화 상대.</div>
+        <div class="a"><span class="ev">발언 있음(아래 인용).</span> (평가) 회사 내부에서도 ‘사실이면 회사 문 닫아야’ 취지 발언 — 사안 중대성 자인 정황.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">이한길</span><span class="role">부부장(2020 민원 담당)</span></div>
+        <div class="r">2020.7·11 민원 처리·‘언제 민원 제기했냐’ 통화 상대.</div>
+        <div class="a"><span class="ev">발언 있음(아래 인용).</span> (평가) 민원 제기 사실 자체를 부정 — 무마 정황(서면 ⑦).</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">유정희</span><span class="role">리서치부 과장</span></div>
+        <div class="r">2018.1.24 ‘배우자 6억 증여(계좌이체)’ 제안 문건 지참 방문.</div>
+        <div class="a">(평가) 세금 회피용 우회 제안 — 회사 차원 개입의 한 정황.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">김오훈</span><span class="role">법무팀 관련(합의서 관여 여부)</span></div>
+        <div class="r">합의서 관여 여부 확인 대상으로 거명(이정미 ‘확인 해봐야 한다’).</div>
+        <div class="a">(평가) 합의서 작성에 법무팀이 개입했는지 규명 대상.</div></div>
+      <div class="pc c-nh"><div class="top"><span class="nm">이지은 · 강수경 · 김재필 · 서보순</span><span class="role">NH 직원(매도 담당)</span></div>
+        <div class="r">2020.3 반대매매 국면에서 신용담보 140% 유지를 위한 매도 전화 담당.</div>
+        <div class="a">(평가) 반대매매 집행의 실무. 지시·재량 범위 확인 대상(직접 가해 의도와는 구별 필요).</div></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-law"><span class="bar"></span>4. NH 소송대리인 및 관련 법률대리</h2>
+    <div class="people">
+      <div class="pc c-law"><div class="top"><span class="nm">송영천</span><span class="role">법무법인(유한) 세한 대표변호사</span></div>
+        <div class="r">피고 1·3(이정미·NH) 담당변호사 지정.</div>
+        <div class="a">(평가) 대리인은 의뢰인 진술에 기초 — 기망 고의 귀속은 원칙적 곤란. 단 진실의무(변호사법 §24②) 관점의 검토 대상.</div></div>
+      <div class="pc c-law"><div class="top"><span class="nm">송창영 · 소제인 · 이혜인</span><span class="role">법무법인(유한) 세한 담당변호사</span></div>
+        <div class="r">1·2·3심 피고 답변서·준비서면 작성·변론.</div>
+        <div class="a">(평가) 1심 ‘합의서 전부 차단’ ↔ 항소심 ‘차익은 합의대상 아님’의 심급 간 모순 주장(판결문 ‘자인’ 적시)을 수행. 사실 기초 제공자 규명이 핵심.</div></div>
+      <div class="pc c-law"><div class="top"><span class="nm">황혜진</span><span class="role">법무법인 화우 담당변호사</span></div>
+        <div class="r">기록상 별도 대리 등장(보조참가/관련 절차 추정).</div>
+        <div class="a">(평가) 등장 맥락 확인 필요 — 직무수행 영역.</div></div>
+      <div class="pc c-law"><div class="top"><span class="nm">김주성 · 최태준 · 임명애 등</span><span class="role">법원 사무관·주사보</span></div>
+        <div class="r">변론조서·판결선고조서 작성 등 법원 사무.</div>
+        <div class="a">직무수행 — 분석 대상 아님(명단 기록 목적).</div></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-court"><span class="bar"></span>5. 법원 (재판부)</h2>
+    <p class="desc">법관은 공적 판단 주체로서, 판단 결과만 중립적으로 기록합니다(인격적 평가 없음).</p>
+    <div class="people">
+      <div class="pc c-court"><div class="top"><span class="nm">최정인 · 임효빈 · 방민우</span><span class="role">서울남부지법 제13민사부(1심)</span></div>
+        <div class="r">2023.11.10 선고 — 이정미·회사 소각하, 임진기 기각.</div>
+        <div class="a"><span class="law">판단:</span> 부제소합의가 사건 전체를 포괄한다고 보아 각하. (분석 의견) 합의 범위를 넓게 본 점이 항소심에서 ‘부당’으로 정정됨.</div></div>
+      <div class="pc c-court"><div class="top"><span class="nm">홍성욱 · 채동수 · 남양우</span><span class="role">서울고법 제14-2민사부(항소심)</span></div>
+        <div class="r">2024.11.7 선고 — 항소기각, 단 이정미 신의성실의무 위반 인정·부제소합의 양도세 한정·1심 각하 ‘부당’.</div>
+        <div class="a"><span class="law">판단:</span> 의무 위반은 인정하되 인과관계 부정. (분석 의견) ‘하락 유도 유인 부재’ 논리의 순환성은 재심·형사에서 다툴 지점.</div></div>
+      <div class="pc c-court"><div class="top"><span class="nm">노경필 · 노태악 · 서경환(주심) · 신숙희</span><span class="role">대법원 제1부(상고심)</span></div>
+        <div class="r">2025.3.13 — 심리불속행 기각(상고심절차특례법 §4).</div>
+        <div class="a"><span class="law">판단:</span> 본안 판단 없이 상고 기각으로 확정.</div></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-fss"><span class="bar"></span>6. 금융감독원 · 감독 라인</h2>
+    <p class="desc">감독기관 직원 역시 공적 처리 주체로서 처리 사실만 기록합니다.</p>
+    <div class="people">
+      <div class="pc c-fss"><div class="top"><span class="nm">이상규</span><span class="role">금감원 수석조사역</span></div>
+        <div class="r">민원 조사 담당(2020~). 통화에서 사안 인지·진행 언급.</div>
+        <div class="a"><span class="ev">발언 있음(아래 인용).</span> 처리 경과 기록.</div></div>
+      <div class="pc c-fss"><div class="top"><span class="nm">송병욱</span><span class="role">금감원 분쟁조정3국 팀장</span></div>
+        <div class="r">분쟁조정 단계 — ‘민·형사상 다툼의 영역’ 취지(2022.3.31).</div>
+        <div class="a"><span class="ev">발언 있음(아래 인용).</span> 조정 종결·법적 절차 안내 취지.</div></div>
+      <div class="pc c-fss"><div class="top"><span class="nm">이병용</span><span class="role">금감원 팀장</span></div>
+        <div class="r">민원 단계 통화(녹취 561p). 법정 진술 안내 언급.</div>
+        <div class="a">발언 정황 있음. (참고) 앞선 보고서의 ‘이병룡’은 ‘이병용’의 오기로 확인.</div></div>
+      <div class="pc c-fss"><div class="top"><span class="nm">유홍근</span><span class="role">금감원 수석(이병용 후임)</span></div>
+        <div class="r">후임 팀장으로 의견서 관련 거명.</div>
+        <div class="a">(참고) 인사상 불이익 우려로 진술 곤란 정황 — 원고 진술 기준.</div></div>
+      <div class="pc c-fss"><div class="top"><span class="nm">이상헌</span><span class="role">금감원 자금시장부 부장(담당 이희건 대리)</span></div>
+        <div class="r">자료/처리 담당 부서 거명.</div>
+        <div class="a">직무 라인 기록.</div></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-etc"><span class="bar"></span>7. 기타 — 언론·외부기관</h2>
+    <div class="people">
+      <div class="pc c-etc"><div class="top"><span class="nm">이진석</span><span class="role">파이낸셜뉴스 기자</span></div>
+        <div class="r">2020.11.4 ‘대주주 양도세 안 내도 돼 — PB 말 듣다 날벼락’ 보도.</div>
+        <div class="a">사건의 공적 보도 — 공익공개의 선례.</div></div>
+      <div class="pc c-etc"><div class="top"><span class="nm">베스트세무법인</span><span class="role">양도세 신고 대행 세무법인</span></div>
+        <div class="r">2018년분 양도세 신고. 22% 오적용으로 추가납부(약 147만원) 발생.</div>
+        <div class="a">(평가) 오안내에 오신고가 중첩된 정황 — 책임 소재는 별도 검토.</div></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-core"><span class="bar"></span>8. 핵심 인물 발언 인용 — 녹취·서면 원문</h2>
+    <p class="desc">분석의 근거가 되는 핵심 문장만 추렸습니다.</p>
+
+    <div class="qcard"><div class="qh red">이정미 (담당 부장)</div>
+      <div class="ql"><span class="t">“제가 그 부분을 미처… 무조건 양도세를 내셔야 되세요.”</span><span class="s">2018. 1. 18. 녹취 — 오안내 실토</span></div>
+      <div class="ql"><span class="t">“5,000원 정도 가격이 오르면 그 돈만큼 나오게 되는 거예요. …올라갔을 때 좀 매도를 하면 어느 정도는 상쇄가 되니까 그 부분에서 제가 보상해드릴 게 있으면 보상을 해드리면 어떨까.”</span><span class="s">2018. 1. 18. 녹취 p.72 — ‘회복 시 보상’ 약속</span></div>
+      <div class="ql"><span class="t">“매도를 하셔야지 금액이 확정되죠. 금액이 확정이 안 된 상태에서는 어떤 것도 할 수가 없다는 답변이었고요.”</span><span class="s">2020. 7. 28. 녹취 p.329·332 — 손실확정 요구</span></div>
+      <div class="ql"><span class="t">“제가 그렇게 할 재산도 없는 상황에서 제가 ‘물어드리겠다.’ 이렇게 말씀을 못 드리기 때문에…”</span><span class="s">2021. 4. 29. 녹취 p.547 — 배상약속 사후 부인</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh red">임진기 (센터장)</div>
+      <div class="ql"><span class="t">“분쟁이나 사고나 이런 거 생겼을 때 제일 깔끔한 거는 픽스시키고… 하는 게 사실은 제일 좋은데, 지금 이거는 이 부장이 감당하기에 지금 너무 큰 금액이 돼 버렸거든.”</span><span class="s">2018. 1. 19. 녹취 p.90 — 확정이 정도임을 인정</span></div>
+      <div class="ql"><span class="t">“‘이게 우리가 픽스를 딱 해서 얼마까지는 책임을 지겠습니다.’ 이게 안 되기 때문에… 차라리 매매가 일어나고 양도세가 발생이 되면 그 결과물이 좀 있으면…”</span><span class="s">2018. 1. 31. 녹취 p.131~132 — 확정 거부·손실확정 유도</span></div>
+      <div class="ql"><span class="t">“책임은 일단은 무조건 직원들이 지게 돼 있습니다.”</span><span class="s">2018. 1. 19. 녹취 p.88 — 책임 개인화</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">송지훈 (후임 지점장) — 묵인·프레임 반복</div>
+      <div class="ql"><span class="t">“다 팔고 그랬으면 아무 문제 없죠.”</span><span class="s">2020. 8. 7. 녹취 13:04 — 인과관계 단절 프레임(후일 판결 논리와 동일)</span></div>
+      <div class="ql"><span class="t">“금액이 너무 크니까 다 못하는 거예요.”</span><span class="s">2020. 8. 7. 녹취 23:04 — 일괄처분 불가 자인(‘다 팔았어야’와 자기모순)</span></div>
+      <div class="ql"><span class="t">“(회사가) 못 물어준다니까.”</span><span class="s">2020. 8. 7. 녹취 20:29 — 회사 배상거부 방침 전달·수용(묵인)</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">김성만 ↔ 김연희 (이용한 상무 비서실)</div>
+      <div class="ql"><span class="t">“이 부분이 지점에 얘기를 하니까 지점에서는 개인한테 다 떠넘기고 이래서, 이걸 내가 본사에 얘기를 해서 어떻게 처리될 것인지 결과를 좀 보라 했는데 내용이 똑같아가지고…”</span><span class="s">김성만, 2018. 1. 29. 녹취 — 회사가 책임을 회피하고 ‘이정미 등 직원 개인에게 배상받으라’며 떠넘긴 정황(법인 책임 전가)</span></div>
+      <div class="ql"><span class="t">“센터 쪽에서는 그냥 그냥 자꾸 이거 묻어가려고 그러는데… 저도 이제 안 되면 저도 너무나 손해가 커가지고 감독원에 얘기를 해야 될 입장이라.”</span><span class="s">김성만, 2018. 1. 29. 녹취 — 민원을 처리하지 않아(묻어가려 함) 발생시점부터 손해가 계속 확대된 정황 + 감독원 호소 예고</span></div>
+      <div class="ql"><span class="t">“상무님이 일단 알고는 계시고요. … 거기 센터에서 그 김성만 님한테 연락이 갈 거 같아요.”</span><span class="s">김연희, 2018. 1. 31. 녹취 — 본사·임원의 2018년 1월 사건 인지 정황</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">유승훈 (차장 / 후임 담당자) — 누락 녹취 제공·책임회피 자인</div>
+      <div class="ql"><span class="t">[제공] 2018년 비서실(김연희) 통화 2건 + 2020년 이정미 본인 통화 다수 — 회사가 “미필적 고의로 누락”했던 녹취 목록을 후임 담당자가 제공.</span><span class="s">2022. 8. 22·26 / 2023. 3. 21 메일 — ‘증거 누락’ 정황의 직접 자료(2020.3.23만 미확보)</span></div>
+      <div class="ql"><span class="t">“좀 더 확장성을 원하시면 대표한테 보내는 게 맞겠죠. 왜냐하면 밑에 부서들은 서로 (책임회피) 딴짓하려고 하니까.”</span><span class="s">2025. 8. 1. 통화 — 조직적 책임회피의 내부자 인정</span></div>
+      <div class="ql"><span class="t">“법무법인 세한에서 서울남부지방법원 관련 소송비용을 청구… 미입금 시 강제집행 등 법적 절차. 부실채권 전담(자산관리부)에서 연락.”</span><span class="s">2025. 7. 24. 통화 — 피해자에 대한 소송비용 청구(2차 가해 정황)</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">유승훈 (차장) — 카카오톡 ‘공개매수청구’ 응답</div>
+      <div class="ql"><span class="t">“신용 36억을 전액 현금으로 상환해야 한다고 합니다.” / “(60억 매수청구는) 장외거래입니다.” / “장외거래 시 수수료가 세금 개념입니다(증권거래세·양도소득세 발생 가능).”</span><span class="s">2024. 11. 20. 카카오톡 — 공개매수청구 실무 안내</span></div>
+      <div class="ql"><span class="t">“이건 증권사 영역은 아닌 것 같습니다. 답변 여부가 법리적인 부분인 듯합니다.”</span><span class="s">2024. 11. 20. 카카오톡 — 합병 무산 시 처리 책임의 회피성 답변</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">이한길 (부부장, 민원 담당)</div>
+      <div class="ql"><span class="t">“언제 민원을 제기하셨습니까? …언론에 기사도 내시고 뭐 다 하셨잖아요.”</span><span class="s">2020. 11. 12. 녹취 — 민원 제기 사실 부정</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">배성진 (컴플라이언스)</div>
+      <div class="ql"><span class="t">“내가 PDF 만들어가지고 전부 다 날릴라해요. 만약에 이게 사실이면 그 회사 문 닫아야 돼요.”</span><span class="s">2022. 8. 11. 통화 — (김성만에게) 사안 중대성 언급</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">이상규 (금감원 수석조사역)</div>
+      <div class="ql"><span class="t">“저희 팀장님까지 다 알고 계십니다. / 팀장님도 이 민원에 대해서는 다 인지를 하고 계신 상황이고…”</span><span class="s">2020. 11. 4. 통화 — 민원 인지 경과</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh">송병욱 (금감원 분쟁조정3국 팀장)</div>
+      <div class="ql"><span class="t">“저희가 볼 때는 민, 형사상 다툼의 영역에 해당이 된다고 봅니다.”</span><span class="s">2022. 3. 31. 통화 — 조정 종결 취지</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh" style="color:var(--teal);">박인구 (공인회계사·세무사) — 제3자 진술</div>
+      <div class="ql"><span class="t">“NH투자증권은 피용자의 잘못된 상담으로 개인인 고객이 감당하기 어려운 손해를 부담하게 하고도 사용자책임을 회피할 뿐만 아니라 법적책임을 면하기 위해 관련 피용자들과 공모하여 …원고의 주장이 수긍되는 점이 많아 …진술서를 제출합니다.”</span><span class="s">2023. 10. 30. 진술서</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh" style="color:var(--teal);">이미현 (원고 30년 지기) — 진정</div>
+      <div class="ql"><span class="t">“김성만이 신용 포함 60억의 주식을 양도할 계획을 실행하려니까 NH투자증권의 잘못된 컨설팅으로 주식매도를 못해 많은 고민을 한 것으로 알고 있습니다.”</span><span class="s">2023. 10. 30. 진정서</span></div>
+    </div>
+
+    <div class="qcard"><div class="qh" style="color:var(--teal);">최경옥 (빨간펜 교사) — 알리바이 / 김성만 진술</div>
+      <div class="ql"><span class="t">“합의도 안 한 서류를 이것들이 도장을 받아 갔어요. … 우리 사무실에 2시간이나 있었다고 이런 식으로 나옵니다.”</span><span class="s">김성만, 2023. 6. 19. — 합의서 기망·‘2시간 체류’ 허위 주장 적시</span></div>
+      <div class="ql"><span class="t">“맞아요. 항상 계셨어요. 제가 한번 알아볼게요.”</span><span class="s">최경옥, 2023. 6. 19. — 2019.2.21 수업 참관 알리바이 확인</span></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:4px;">
+    <h2 class="t-nh"><span class="bar"></span>9. 분석 종합 — ‘한 직원의 실수’가 아닌 ‘부서를 가로지른 분업’</h2>
+    <p class="desc">이 사건의 인물 지형은 다음과 같이 부서를 가로지르는 연쇄 구조를 보입니다.</p>
+    <div class="chain">
+      <div class="n red"><div class="s">실행</div><div class="t">이정미</div></div><span class="ar">→</span>
+      <div class="n red"><div class="s">설계·종용</div><div class="t">임진기</div></div><span class="ar">→</span>
+      <div class="n"><div class="s">자료 차단</div><div class="t">신정대</div></div><span class="ar">→</span>
+      <div class="n"><div class="s">민원 부정</div><div class="t">이한길</div></div><span class="ar">→</span>
+      <div class="n red"><div class="s">묵인·승계</div><div class="t">송지훈</div></div><span class="ar">→</span>
+      <div class="n"><div class="s">본사 인지</div><div class="t">김연희→이용한</div></div><span class="ar">→</span>
+      <div class="n"><div class="s">감사·준법</div><div class="t">전홍열·박철·박상호</div></div><span class="ar">→</span>
+      <div class="n"><div class="s">소송 방어</div><div class="t">세한</div></div><span class="ar">→</span>
+      <div class="n"><div class="s">조직의 정점</div><div class="t">정영채·윤병운</div></div>
+    </div>
+    <p style="margin-top:14px;">특히 <b>본사 인지</b>는 2018년 1월 비서실 통화(김연희)에서 “상무님이 알고 계신다”로, <b>승계 묵인</b>은 2020년 8월 후임 지점장 송지훈이 사건 전모를 듣고도 ‘다 팔았으면 문제없다’는 회사 프레임을 반복한 데서 확인됩니다. 임진기 본인이 ‘전 부서가 임원까지 다 공개됐다는 녹취록이 다 있다’, ‘주요 임원들은 다 알고 있는 내용’이라고 말한 점도 이 구조를 뒷받침합니다. 또한 <b>최경옥(빨간펜 교사)의 알리바이</b>는 ‘사무실 2시간 체류’라는 피고 측 주장의 물리적 불가능성을 가리키는 제3자 단서입니다. 나아가 이정미 교체 후 후임 담당자 <b>유승훈 차장</b>이 ‘미필적 고의로 누락’됐던 2018년 비서실·2020년 이정미 통화 녹취를 제공한 사실은 <b>회사의 증거 누락 정황</b>을, “밑에 부서들은 책임회피하려 한다”는 그의 발언은 조직적 책임회피를, 2025년 회사의 소송비용 청구는 <b>2차 가해</b>의 정황을 각각 보여줍니다. 법원·금감원 인물은 공적 판단·처리 주체로서 중립적으로 기록했으며, 특히 <b>항소심이 ‘이정미의 신의성실의무 위반’을 인정하고 1심 각하를 ‘부당’으로 정정</b>한 사실과 <b>금감원 팀장이 ‘민·형사상 다툼의 영역’</b>이라 한 사실은, 향후 형사·재심 절차에서 원고에게 유리한 공적 기록으로 남습니다.</p>
+    <div class="notice" style="margin-top:14px;"><b>주의</b> — ‘(평가)’ 표기는 작성자(김성만)의 의견으로 법원의 확정 판단과 구분됩니다. 가해로 지목된 인물에 대한 형사적 평가는 수사기관의 권한이며, 대외 공표 시 명예훼손·무고 위험이 있으므로 변호사 검토를 거쳐야 합니다. 모든 발언 인용은 녹취·서면 원문을 따랐으며, 표기상 오류가 있으면 원본으로 정정합니다.</div>
+  </section>
+
+  <div class="foot">작성: 김성만 / 2026. 6. 13. · NH투자증권 CJ E&amp;M 사건(서울남부지법 2022가합108719 → 서울고법 2023나2052728 → 대법원 2024다321102) 인물 분석. 원본 보고서를 읽기 쉬운 형태로 재구성.</div>
+</div>
+
+
+</body></html>
