@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- saved from url=(0348)file:///C:/Users/user/Desktop/7%EC%B0%A8-%EC%B5%9C%EC%A2%85%EC%A0%9C%EC%B6%9C%EC%84%9C%EB%A5%98%EC%B7%A8%ED%95%A8-8%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80-desktop/NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C-9%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80/NH%EC%82%AC%EA%B1%B4_%EC%8B%A4%EC%8B%9C%EA%B0%84_%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C_V4.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NH투자증권 사건 · 실시간 관리 대시보드 V4</title>
+<style>
+  :root{--bg:#0f1419;--panel:#1a212b;--panel2:#222b37;--line:#2e3947;--txt:#e9eef5;--muted:#9fb0c3;
+    --accent:#c0392b;--accent2:#e08e0b;--good:#2e9e5b;--blue:#2b6cb0;--chip:#26313e;--life:#3aa6b9;}
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#0c1117,#0f1419);color:var(--txt);
+    font-family:"Noto Sans CJK KR","Malgun Gothic",system-ui,sans-serif;line-height:1.55}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 60px}
+  header.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;
+    border-bottom:2px solid var(--accent);padding-bottom:14px;margin-bottom:16px}
+  .title h1{margin:0;font-size:22px}.title p{margin:4px 0 0;color:var(--muted);font-size:13px}
+  .live{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:12px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--good);animation:p 1.8s infinite}
+  @keyframes p{0%{box-shadow:0 0 0 0 rgba(46,158,91,.5)}70%{box-shadow:0 0 0 9px rgba(46,158,91,0)}100%{box-shadow:0 0 0 0 rgba(46,158,91,0)}}
+  .demand{background:linear-gradient(90deg,#2a1316,#241a12);border:1px solid var(--accent);border-radius:14px;padding:15px 18px;margin-bottom:18px}
+  .demand h2{margin:0 0 4px;font-size:17px;color:#ff8a76}.demand p{margin:0 0 11px;color:var(--muted);font-size:13px}
+  .dchips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}@media(max-width:760px){.dchips{grid-template-columns:1fr}}
+  .dchip{background:#161d27;border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+  .dchip b{display:block;font-size:14px;margin-bottom:3px}.dchip span{font-size:12px;color:var(--muted)}
+  .dchip.no b{color:#ff7a66}.dchip.law b{color:var(--accent2)}.dchip.fast b{color:#7fc7ff}
+  .grid{display:grid;gap:13px}.kpis{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-bottom:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+  .card .k{font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:600}
+  .card .v{font-size:23px;font-weight:800}.card .s{font-size:11.5px;color:var(--muted);margin-top:5px}
+  .card.alert{border-color:var(--accent)}.card.alert .v{color:#ff7a66}
+  .card.life{border-color:var(--life)}.card.life .v{color:#7fdce8}
+  .card.health{border-color:var(--good)}.card.health .v{color:#74e0a0}
+  .countbox{display:flex;gap:6px;flex-wrap:wrap}
+  .cb{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:6px 9px;text-align:center;min-width:48px}
+  .cb b{display:block;font-size:18px;font-weight:800}.cb span{font-size:10px;color:var(--muted)}
+  h2.sec{font-size:15px;margin:24px 0 12px;display:flex;align-items:center;gap:9px}
+  h2.sec::before{content:"";width:4px;height:16px;background:var(--accent);border-radius:3px;display:inline-block}
+  .lifewrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 18px 16px}
+  .lifebar{position:relative;height:34px;border-radius:8px;overflow:hidden;background:#223;margin:40px 0 8px}
+  .seg{position:absolute;top:0;bottom:0}
+  .seg.trust{background:linear-gradient(90deg,#1d6b50,#2e9e5b)}
+  .seg.hell{background:linear-gradient(90deg,#7a1f1f,#c0392b)}
+  .seg.healthy{background:linear-gradient(90deg,#1f7d63,#37b88a)}
+  .seg.frail{background:repeating-linear-gradient(45deg,#7a5a16,#7a5a16 9px,#5c4410 9px,#5c4410 18px)}
+  .mark{position:absolute;top:-34px;transform:translateX(-50%);text-align:center;font-size:10px;color:var(--muted);white-space:nowrap}
+  .mark b{display:block;color:#fff;font-size:11px}.mark i{position:absolute;left:50%;top:26px;width:2px;height:32px;background:#fff6;transform:translateX(-50%)}
+  .lifelegend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:14px}
+  .lifelegend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .lifenote{margin-top:12px;font-size:13px;color:#ffd9d0;background:#2a1316;border:1px solid var(--accent);border-radius:10px;padding:11px 13px}
+  .lifenote b{color:#ff8a76}
+  .birth{margin-top:10px;font-size:12px;color:var(--muted);background:#161d27;border:1px dashed var(--line);border-radius:8px;padding:8px 11px}
+  .birth input{background:#0f1419;border:1px solid var(--line);color:#fff;border-radius:6px;padding:3px 7px;font-size:12px;width:130px}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:var(--panel);border-radius:12px;overflow:hidden}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--panel2);color:var(--muted);font-weight:700;font-size:12px}tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;background:var(--chip);color:var(--muted);font-weight:700}
+  .tag.v{background:#2a1d1d;color:#ff8a76}.tag.r{background:#1d2630;color:#8fc0ef}
+  .two{grid-template-columns:1.3fr 1fr;align-items:start}@media(max-width:880px){.two{grid-template-columns:1fr}}
+  .road{display:flex;flex-direction:column}.step{display:flex;gap:11px;padding:9px 0;border-bottom:1px dashed var(--line)}.step:last-child{border-bottom:none}
+  .num{flex:0 0 26px;height:26px;border-radius:50%;background:var(--chip);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:var(--accent2)}
+  .step .t{font-weight:700;font-size:13px}
+  .tl{position:relative;padding-left:18px}.tl::before{content:"";position:absolute;left:5px;top:4px;bottom:4px;width:2px;background:var(--line)}
+  .ev{position:relative;padding:6px 0 6px 4px}.ev::before{content:"";position:absolute;left:-17px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--blue);border:2px solid var(--bg)}
+  .ev.bad::before{background:var(--accent)}.ev .dt{font-size:11px;color:var(--muted)}.ev .x{font-size:12.5px}
+  .pill{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin:3px 5px 3px 0;font-size:12px}.pill b{color:#fff}
+  footer{margin-top:28px;color:var(--muted);font-size:11.5px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="title">
+      <h1>NH투자증권 사건 · 실시간 관리 대시보드 <span style="color:#74e0a0">V4</span></h1>
+      <p>원고 김성만(1989.12.6 계좌개설) v. NH투자증권·이정미·임진기 / 피고대리 법무법인 세한 송창영</p>
+    </div>
+    <div class="live"><span class="dot"></span><span id="now">2026-06-28 16:18:55</span> 기준 · 자동 갱신</div>
+  </header>
+
+  <div class="demand">
+    <h2>추가소송으로 피해자를 ‘두 번’ 죽이지 마십시오</h2>
+    <p>소송이 빼앗는 것은 단순한 시간이 아니라, ‘건강하게 살 수 있는 시간’입니다. 필요한 것은 더 긴 재판이 아니라 ‘끝’입니다.</p>
+    <div class="dchips">
+      <div class="dchip no"><b>① 추가소송 중단</b><span>소송비 청구·역공으로 시간을 더 빼앗지 말 것</span></div>
+      <div class="dchip law"><b>② 징벌적 배상 입법</b><span>핵심손실 10배 ‘기망배상’ 도입으로 재발 차단</span></div>
+      <div class="dchip fast"><b>③ 신속재판</b><span>재심·형사·인가취소를 한 번에 — 더는 미루지 말 것</span></div>
+    </div>
+  </div>
+
+  <div class="grid kpis">
+    <div class="card alert">
+      <div class="k">⏰ 자동발송(7/1)까지</div>
+      <div class="countbox" id="ddayBox"><div class="cb"><b>2</b><span>일</span></div><div class="cb"><b>07</b><span>시</span></div><div class="cb"><b>41</b><span>분</span></div><div class="cb"><b>04</b><span>초</span></div></div>
+      <div class="s">2026-07-01 00:00 · 전 고발처·언론</div>
+    </div>
+    <div class="card">
+      <div class="k">피해 경과 일수</div>
+      <div class="v" id="hellDays">3,083일</div>
+      <div class="s" id="hellSub">약 8.4년</div>
+    </div>
+    <div class="card life">
+      <div class="k">🤝 NH와 함께한 날</div>
+      <div class="v" id="trustDays">13,353일</div>
+      <div class="s" id="trustSub">약 36.6년</div>
+    </div>
+    <div class="card health">
+      <div class="k">💚 건강 생존 잔여(75세)</div>
+      <div class="v" id="healthDays">7,795일</div>
+      <div class="s" id="healthSub">2047.11.1까지 · 약 21.3년</div>
+    </div>
+    <div class="card life">
+      <div class="k">⏳ 생존 예상 잔여(80.6세)</div>
+      <div class="v" id="lifeDays">9,841일</div>
+      <div class="s" id="lifeSub">2053.6.8까지 · 약 26.9년 (80.6세)</div>
+    </div>
+    <div class="card">
+      <div class="k">최고금액(핵심·5배)</div>
+      <div class="v" style="color:#ff8a76">8,915억</div>
+      <div class="s">총손해 1,783.01억 × 5 · 무시 시 10배</div>
+    </div>
+  </div>
+
+  <h2 class="sec">한 사람의 인생 위에 놓인 사건 — ‘건강한 시간’이 빼앗긴다 (평균수명 80.6세 기준)</h2>
+  <div class="lifewrap">
+    <div class="lifebar" id="lifebar">
+      <div class="seg trust" id="segTrust" style="left: 0%; width: 44.2784%;"></div>
+      <div class="seg hell" id="segHell" style="left: 44.2784%; width: 13.293%;"></div>
+      <div class="seg healthy" id="segHealthy" style="left: 57.5714%; width: 33.6078%;"></div>
+      <div class="seg frail" id="segFrail" style="left: 91.1791%; width: 8.82087%;"></div>
+      <div class="mark" id="mOpen" style="left: 0%;"><b>1989.12.6</b>계좌개설<i></i></div>
+      <div class="mark" id="mEvent" style="left: 44.2784%;"><b>2018.1.18</b>사건<i></i></div>
+      <div class="mark" id="mNow" style="left: 57.5714%;"><b id="mNowD">2026.6.28</b>현재<i></i></div>
+      <div class="mark" id="m75" style="left: 91.1791%;"><b id="m75D">2047(75세)</b>건강수명<i></i></div>
+      <div class="mark" id="mEnd" style="left: 100%;"><b id="mEndD">2053.6.8(80.6세)</b>평균수명<i></i></div>
+    </div>
+    <div class="lifelegend">
+      <span><i style="background:#2e9e5b"></i>믿고 거래한 약 29년</span>
+      <span><i style="background:#c0392b"></i>소송지옥(사건~오늘)</span>
+      <span><i style="background:#37b88a"></i>건강한 여생(오늘~75세)</span>
+      <span><i style="background:#7a5a16"></i>노쇠·투병 여생(75세~80.6세)</span>
+    </div>
+    <div class="lifenote">
+      소송은 단순히 ‘날짜’를 빼앗는 것이 아닙니다. <b id="hConsumed">지금 건강하게 남은 시간은 약 21.3년뿐입니다.</b> 추가소송 한 번은, 붉은 칸을 늘려
+      가장 소중한 ‘건강한 초록 시간’을 직접 갉아먹습니다. 그래서 ‘두 번 죽이지 말라’는 것입니다.
+    </div>
+    <div class="birth">
+      ※ 계산 기준 — 한국인 평균수명 <b>80.6세</b>, 건강수명 <b>75세</b>. 생년월일(추정·수정 가능):
+      <input id="birthInput" type="date" value="1972-11-01"> — 정확한 생년월일을 입력하면 모든 수치가 즉시 갱신됩니다.
+    </div>
+  </div>
+
+  <div class="grid two" style="margin-top:8px">
+    <div>
+      <h2 class="sec">산출물 현황 (버전·문서)</h2>
+      <table id="docTable"><thead><tr><th style="width:80px">구분</th><th>문서</th></tr></thead><tbody><tr><td><span class="tag v">V7</span></td><td>NH 대표이사 최고서 — 2심 판결문 모순·73% 소송사기 붕괴·파산이 속죄</td></tr><tr><td><span class="tag v">V6</span></td><td>삼중 덫 — 키인협박·판례없음 소송빌드업·공개매수청구 모순(증거14점)</td></tr><tr><td><span class="tag v">V5-2</span></td><td>김성만 친필톤 — 58.8억·전수발언·8,915억</td></tr><tr><td><span class="tag r">통합</span></td><td>송창영+NH 연대 — 확신범·서류살인·2심 뒤집기 의혹·변호사 제명</td></tr><tr><td><span class="tag r">법관탄핵</span></td><td>판사 탄핵소추 청원서(보강판) — 재판관 전원 적시·도덕윤리 파산</td></tr><tr><td><span class="tag r">법률파산</span></td><td>NH 법률 파산 보고서 — 자본시장법 퇴출(법률·회계·세무)</td></tr><tr><td><span class="tag r">감사원</span></td><td>금감원·금융위·권익위 셀프각하·2년 방치 직무감찰 청구</td></tr><tr><td><span class="tag r">명단</span></td><td>참고인·피고소·조사대상 43명 명단(연락처 포함)</td></tr><tr><td><span class="tag r">분석/우화</span></td><td>집행vs보류·저희가해준다·비금전동기 등 분석+우화</td></tr></tbody></table>
+      <h2 class="sec">소송 경과 타임라인</h2>
+      <div class="tl">
+        <div class="ev"><div class="dt">1989-12-06</div><div class="x">NH 계좌개설 — 37년 충성거래의 시작</div></div>
+        <div class="ev bad"><div class="dt">2018-01-18</div><div class="x">이정미 ‘무조건 양도세’ 오안내 · 좀비세금 덫</div></div>
+        <div class="ev bad"><div class="dt">2019-02-21 11:05:04</div><div class="x">‘와’ 한 글자 사기 합의서(사전출력·출력시각 삭제)</div></div>
+        <div class="ev"><div class="dt">1심</div><div class="x">2023-11-10 각하·기각 (최정인·임효빈·방민우)</div></div>
+        <div class="ev"><div class="dt">2심</div><div class="x">2024-11-07 항소기각 (홍성욱·채동수·남양우)</div></div>
+        <div class="ev bad"><div class="dt">3심</div><div class="x">2025-03-13 심리불속행 확정 (노경필 외)</div></div>
+        <div class="ev bad"><div class="dt">2026-06-30 → 07-01</div><div class="x">최고 이행기한 → 자동발송·고소·인가취소 청구</div></div>
+      </div>
+    </div>
+    <div>
+      <h2 class="sec">핵심 수치·당사자</h2>
+      <div class="card">
+        <span class="pill">기초자산 <b>58.8억</b></span><span class="pill">미실현이익 <b>13.9억</b></span>
+        <span class="pill">총손해 <b>1,783.01억</b></span><span class="pill">5배 징벌 <b>8,915억</b></span>
+        <span class="pill">반대매매 <b>223건</b></span><span class="pill">전수발언 <b>3,083일</b></span>
+        <span class="pill">증거 <b>14점</b></span><span class="pill">조사대상 <b>43명</b></span>
+      </div>
+      <h2 class="sec">공익 고발·청구 로드맵</h2>
+      <div class="card road" id="road"><div class="step"><div class="num">0</div><div><div class="t">증거보전·정보공개청구 (open.go.kr·1332)</div></div></div><div class="step"><div class="num">1</div><div><div class="t">형사 고소·고발 (서울중앙지검 1301·공수처)</div></div></div><div class="step"><div class="num">2</div><div><div class="t">인가취소 (금감원 1332·금융위·자본시장법 §420)</div></div></div><div class="step"><div class="num">3</div><div><div class="t">감찰·반부패 (감사원·권익위 1398)</div></div></div><div class="step"><div class="num">4</div><div><div class="t">재심·법관 탄핵청원·변호사 제명</div></div></div><div class="step"><div class="num">5</div><div><div class="t">입법 — 징벌 10배·신속재판 국민동의청원</div></div></div><div class="step"><div class="num">6</div><div><div class="t">공론화·언론(최후)</div></div></div></div>
+    </div>
+  </div>
+
+  <footer>
+    ⓘ 열 때마다 자동 계산됩니다. 생존 예상은 한국인 평균수명 80.6세, 건강수명은 75세, 생년월일은 입력값 기준입니다(개인정보 미저장).
+    죄명·배임·소송사기 표현은 ‘검토 쟁점’이며 단정이 아닙니다. 제출 전 변호사 검토 권장.
+  </footer>
+</div>
+
+<script>
+  function pad(n){return String(n).padStart(2,"0");}
+  var DAY=86400000;
+  var tOpen=new Date(1989,11,6), tEvent=new Date(2018,0,18,9,7,0);
+  function birth(){var v=document.getElementById("birthInput").value;return v?new Date(v):new Date(1972,10,1);}
+  function ageDate(b,yrs){var w=Math.floor(yrs);return new Date(b.getFullYear()+w,b.getMonth(),b.getDate()+Math.round((yrs-w)*365.25));}
+  var docs=[
+   ["V7","NH 대표이사 최고서 — 2심 판결문 모순·73% 소송사기 붕괴·파산이 속죄"],
+   ["V6","삼중 덫 — 키인협박·판례없음 소송빌드업·공개매수청구 모순(증거14점)"],
+   ["V5-2","김성만 친필톤 — 58.8억·전수발언·8,915억"],
+   ["통합","송창영+NH 연대 — 확신범·서류살인·2심 뒤집기 의혹·변호사 제명"],
+   ["법관탄핵","판사 탄핵소추 청원서(보강판) — 재판관 전원 적시·도덕윤리 파산"],
+   ["법률파산","NH 법률 파산 보고서 — 자본시장법 퇴출(법률·회계·세무)"],
+   ["감사원","금감원·금융위·권익위 셀프각하·2년 방치 직무감찰 청구"],
+   ["명단","참고인·피고소·조사대상 43명 명단(연락처 포함)"],
+   ["분석/우화","집행vs보류·저희가해준다·비금전동기 등 분석+우화"]
+  ];
+  var tb=document.querySelector("#docTable tbody");
+  docs.forEach(function(d){var tr=document.createElement("tr");var cls=d[0].indexOf("V")===0?"v":"r";
+    tr.innerHTML='<td><span class="tag '+cls+'">'+d[0]+'</span></td><td>'+d[1]+'</td>';tb.appendChild(tr);});
+  var road=[
+   ["0","증거보전·정보공개청구 (open.go.kr·1332)"],["1","형사 고소·고발 (서울중앙지검 1301·공수처)"],
+   ["2","인가취소 (금감원 1332·금융위·자본시장법 §420)"],["3","감찰·반부패 (감사원·권익위 1398)"],
+   ["4","재심·법관 탄핵청원·변호사 제명"],["5","입법 — 징벌 10배·신속재판 국민동의청원"],["6","공론화·언론(최후)"]
+  ];
+  var rd=document.getElementById("road");
+  road.forEach(function(s){var el=document.createElement("div");el.className="step";
+    el.innerHTML='<div class="num">'+s[0]+'</div><div><div class="t">'+s[1]+'</div></div>';rd.appendChild(el);});
+  function fmt(d){return d.getFullYear()+"."+(d.getMonth()+1)+"."+d.getDate();}
+  function tick(){
+    var now=new Date();
+    document.getElementById("now").textContent=now.getFullYear()+"-"+pad(now.getMonth()+1)+"-"+pad(now.getDate())+" "+pad(now.getHours())+":"+pad(now.getMinutes())+":"+pad(now.getSeconds());
+    var target=new Date(2026,6,1,0,0,0),diff=Math.max(0,target-now);
+    var dd=Math.floor(diff/DAY),hh=Math.floor(diff%DAY/3600000),mm=Math.floor(diff%3600000/60000),ss=Math.floor(diff%60000/1000);
+    document.getElementById("ddayBox").innerHTML='<div class="cb"><b>'+dd+'</b><span>일</span></div><div class="cb"><b>'+pad(hh)+'</b><span>시</span></div><div class="cb"><b>'+pad(mm)+'</b><span>분</span></div><div class="cb"><b>'+pad(ss)+'</b><span>초</span></div>';
+    var hell=Math.floor((now-tEvent)/DAY);
+    document.getElementById("hellDays").textContent=hell.toLocaleString()+"일";
+    document.getElementById("hellSub").textContent="약 "+(hell/365.25).toFixed(1)+"년";
+    var trust=Math.floor((now-tOpen)/DAY);
+    document.getElementById("trustDays").textContent=trust.toLocaleString()+"일";
+    document.getElementById("trustSub").textContent="약 "+(trust/365.25).toFixed(1)+"년";
+    var b=birth(); var t75=ageDate(b,75), tEnd=ageDate(b,80.6);
+    var health=Math.floor((t75-now)/DAY);
+    document.getElementById("healthDays").textContent=(health>0?health.toLocaleString():"0")+"일";
+    document.getElementById("healthSub").textContent=fmt(t75)+"까지 · 약 "+(health/365.25).toFixed(1)+"년";
+    var life=Math.floor((tEnd-now)/DAY);
+    document.getElementById("lifeDays").textContent=(life>0?life.toLocaleString():"0")+"일";
+    document.getElementById("lifeSub").textContent=fmt(tEnd)+"까지 · 약 "+(life/365.25).toFixed(1)+"년 (80.6세)";
+    var span=tEnd-tOpen;
+    var pE=(tEvent-tOpen)/span*100, pN=(now-tOpen)/span*100, pH=(t75-tOpen)/span*100;
+    if(pH<pN)pH=pN; if(pH>100)pH=100; if(pN>100)pN=100;
+    document.getElementById("segTrust").style.cssText="left:0%;width:"+pE+"%";
+    document.getElementById("segHell").style.cssText="left:"+pE+"%;width:"+(pN-pE)+"%";
+    document.getElementById("segHealthy").style.cssText="left:"+pN+"%;width:"+(pH-pN)+"%";
+    document.getElementById("segFrail").style.cssText="left:"+pH+"%;width:"+(100-pH)+"%";
+    document.getElementById("mOpen").style.left="0%";document.getElementById("mEvent").style.left=pE+"%";
+    document.getElementById("mNow").style.left=pN+"%";document.getElementById("m75").style.left=pH+"%";document.getElementById("mEnd").style.left="100%";
+    document.getElementById("mNowD").textContent=fmt(now);
+    document.getElementById("m75D").textContent=(b.getFullYear()+75)+"(75세)";
+    document.getElementById("mEndD").textContent=fmt(tEnd)+"(80.6세)";
+    var hRemain=(t75-now)/DAY;
+    document.getElementById("hConsumed").textContent="지금 건강하게 남은 시간은 약 "+(hRemain/365.25).toFixed(1)+"년뿐입니다.";
+  }
+  document.getElementById("birthInput").addEventListener("change",tick);
+  tick(); setInterval(tick,1000);
+</script>
+
+
+</body></html>
