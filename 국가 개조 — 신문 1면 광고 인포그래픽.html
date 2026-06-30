@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0443)file:///C:/Users/user/Desktop/7%EC%B0%A8-%EC%B5%9C%EC%A2%85%EC%A0%9C%EC%B6%9C%EC%84%9C%EB%A5%98%EC%B7%A8%ED%95%A8-8%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80-desktop/NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C-9%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80/%EC%8B%A0%EB%AC%B81%EB%A9%B4%EA%B4%91%EA%B3%A0_%EA%B5%AD%EA%B0%80%EA%B0%9C%EC%A1%B0_5%EB%8C%80%ED%98%81%ED%8C%8C%EA%B3%BC%EC%A0%9C_%EC%9D%B8%ED%8F%AC%EA%B7%B8%EB%9E%98%ED%94%BD_260629.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>국가 개조 — 신문 1면 광고 인포그래픽</title>
+<style>
+  :root{
+    --ink:#14110e; --paper:#f7f4ec; --red:#b3121b; --gold:#9a7b1f; --line:#1a1714; --muted:#5e564c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#3a3631;font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink)}
+  .sheet{max-width:1000px;margin:24px auto;background:var(--paper);padding:34px 40px 44px;
+    box-shadow:0 18px 60px rgba(0,0,0,.5);position:relative}
+  .serif{font-family:"Noto Serif KR","Nanum Myeongjo",serif}
+  /* masthead */
+  .top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px double var(--ink);padding-bottom:8px;font-size:12px;color:var(--muted);letter-spacing:.5px}
+  .top .adtag{background:var(--ink);color:var(--paper);padding:3px 10px;font-weight:800;letter-spacing:2px}
+  .masthead{text-align:center;border-bottom:4px solid var(--ink);padding:10px 0 12px;margin-bottom:6px}
+  .masthead .kicker{font-size:14px;font-weight:800;color:var(--red);letter-spacing:6px}
+  .masthead h1{margin:6px 0 0;font-size:30px;font-weight:900;letter-spacing:-1px}
+  .rule{height:6px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:8px 0}
+
+  /* hero headline */
+  .hero{text-align:center;padding:18px 6px 10px}
+  .hero .deck{font-size:14px;color:var(--muted);font-weight:700;margin-bottom:10px;letter-spacing:.5px}
+  .hero h2{margin:0;font-size:46px;line-height:1.12;font-weight:900;letter-spacing:-1.5px}
+  .hero h2 .r{color:var(--red)}
+  .hero .sub{margin-top:14px;font-size:16px;color:var(--ink);font-weight:600}
+  .pull{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin:18px 0;padding:12px 0;text-align:center}
+  .pull b{font-size:19px;font-weight:900}
+  .pull .em{color:var(--red)}
+
+  /* questions strip */
+  .qhead{text-align:center;font-size:13px;font-weight:900;letter-spacing:4px;color:var(--red);margin:6px 0 10px}
+  .qs{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:2px solid var(--ink)}
+  .q{padding:14px 12px;border-right:1px solid var(--ink);text-align:center}
+  .q:last-child{border-right:none}
+  .q .num{font-family:"Noto Serif KR",serif;font-size:30px;font-weight:900;color:var(--red);line-height:1}
+  .q .t{font-size:13px;font-weight:700;margin-top:8px;line-height:1.45}
+  @media(max-width:760px){.qs{grid-template-columns:repeat(2,1fr)}.q{border-bottom:1px solid var(--ink)}}
+
+  /* reform grid */
+  .section-title{font-family:"Noto Serif KR",serif;font-size:24px;font-weight:900;text-align:center;margin:28px 0 4px}
+  .section-title .r{color:var(--red)}
+  .section-sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{border:2px solid var(--ink);padding:15px 16px;background:#fffdf8;position:relative}
+  .card .no{position:absolute;top:-14px;left:14px;background:var(--red);color:#fff;font-weight:900;font-size:15px;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .card h3{margin:8px 0 6px;font-size:18px;font-weight:900}
+  .card h3 .dom{color:var(--red);font-size:13px;display:block;letter-spacing:1px;margin-bottom:2px}
+  .card p{margin:0;font-size:13.5px;color:var(--ink);line-height:1.55}
+  .card .kill{margin-top:8px;font-size:12.5px;color:var(--red);font-weight:800}
+  .card.big{grid-column:1 / -1;background:#1a1714;color:var(--paper);border-color:var(--ink)}
+  .card.big h3{color:#fff}.card.big p{color:#e7e0d2}.card.big .kill{color:#ffd27a}
+  .card.big .no{background:#ffd27a;color:#1a1714}
+
+  /* CTA */
+  .cta{margin-top:26px;border:3px double var(--ink);padding:18px;text-align:center;background:#fff8ea}
+  .cta .big{font-family:"Noto Serif KR",serif;font-size:22px;font-weight:900}
+  .cta .big .r{color:var(--red)}
+  .cta .line{margin-top:8px;font-size:14px;font-weight:700}
+  .cta .url{margin-top:6px;font-size:13px;color:var(--muted)}
+
+  .foot{margin-top:20px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;color:var(--muted);line-height:1.6}
+  @media print{body{background:#fff}.sheet{box-shadow:none;margin:0;max-width:none}}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="top">
+    <span>2026年 6月 29日 · 國民에게 드리는 글</span>
+    <span class="adtag">광고 · 意見廣告</span>
+    <span>第 1 面 · 全面</span>
+  </div>
+
+  <div class="masthead">
+    <div class="kicker">大 韓 民 國  改 造</div>
+    <h1 class="serif">면책(免責)의 나라를 끝내자</h1>
+  </div>
+  <div class="rule"></div>
+
+  <div class="hero">
+    <div class="deck">한 시민이 거짓에 9년을 빼앗기는 동안 — 금융·감독·사법, 누구도 책임지지 않았다</div>
+    <h2 class="serif">위법은 있는데,<br><span class="r">책임지는 자가 없다.</span></h2>
+    <div class="sub">잔챙이를 묻지 말라. 우리는 ‘제도’를 묻는다 — 왜 이 나라는 거대한 가해자를 ‘면책’시키는가.</div>
+  </div>
+
+  <div class="pull">
+    <b>“거짓으로 한 시민을 으깨고도 멀쩡히 시장에 남는 나라라면,</b> <b class="em">그 다음 피해자는 바로 당신이다.”</b>
+  </div>
+
+  <div class="qhead">국 민 이  묻 는 다 — 다섯 개의 의문</div>
+  <div class="qs">
+    <div class="q"><div class="num">Q1</div><div class="t">왜 거대 금융사는<br>거짓으로 이기고도<br>시장에 남는가?</div></div>
+    <div class="q"><div class="num">Q2</div><div class="t">왜 감독기관은<br>배정 2일 만에<br>‘셀프 각하’하는가?</div></div>
+    <div class="q"><div class="num">Q3</div><div class="t">왜 판결문은<br>한쪽 서면을 99%<br>복사해도 무책임한가?</div></div>
+    <div class="q"><div class="num">Q4</div><div class="t">왜 ‘퇴직’ 한 번이면<br>탄핵을 피하는가?</div></div>
+    <div class="q"><div class="num">Q5</div><div class="t">왜 피해자만<br>9년을 죽고,<br>가해자는 안 죽는가?</div></div>
+  </div>
+
+  <div class="section-title serif">앞으로 <span class="r">혁파(革罷)</span>되어야 할 5대 국가 개조 과제</div>
+  <div class="section-sub">— 작은 것은 버린다. 판을 바꾸는 ‘핵심’만 던진다 —</div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="no">1</div>
+      <h3><span class="dom">금 융</span>거짓이 이기지 못하는 자본시장</h3>
+      <p>핵심손실 <b>10배 ‘기망배상’</b> 입법, 고객 보호의무 위반 <b>인가취소 실질화</b>. 솜방망이 과태료가 아니라, ‘회사가 망하는’ 비용을 매겨 재발을 끊는다.</p>
+      <div class="kill">▶ 혁파: ‘푼돈 합의로 거대 손해 덮는’ 악마적 가성비</div>
+    </div>
+    <div class="card">
+      <div class="no">2</div>
+      <h3><span class="dom">감 독</span>감독기관이 ‘선수’가 되지 못하게</h3>
+      <p>민원 <b>‘셀프 각하’ 금지</b>, 관계자 회피·셀프조사 차단, <b>직무유기 처벌</b>과 독립 옴부즈만. 심판이 한쪽 편을 드는 순간, 시장의 신뢰는 무너진다.</p>
+      <div class="kill">▶ 혁파: ‘배정 2일 각하·핵심 녹취 배제’의 직무유기</div>
+    </div>
+    <div class="card">
+      <div class="no">3</div>
+      <h3><span class="dom">사 법</span>판결을 ‘검증 가능’하게</h3>
+      <p>판결문 <b>표절(복사율)·증거 열람 로그 공개</b>, <b>심리불속행 이유기재</b> 의무화, <b>퇴직 후에도 탄핵 계속</b>. 판단의 내용이 아니라 ‘직무유기’를 책임지게 한다.</p>
+      <div class="kill">▶ 혁파: 일방 서면 99% 복사·이유 없는 기각</div>
+    </div>
+    <div class="card">
+      <div class="no">4</div>
+      <h3><span class="dom">책 임</span>‘면책의 8개 문’을 닫는다</h3>
+      <p>재판 면책·탄핵 퇴직회피·재판소원 금지 등 <b>면책 탈출구 폐기</b>, 가해 임원·관여자 <b>개인책임·구상</b>. 조직 뒤에 숨는 ‘얼굴 없는 가해’를 끝낸다.</p>
+      <div class="kill">▶ 혁파: ‘담당 직원 1인 탓’이라는 책임 세탁</div>
+    </div>
+    <div class="card big">
+      <div class="no">5</div>
+      <h3><span class="dom">시 민</span>국민이 직접 견제하는 나라</h3>
+      <p>국민동의청원을 <b>탄핵·입법으로 연계</b>하고, 금융·재판 피해자에게 <b>신속 구제·신변 보호</b>를 보장한다. 견제받지 않는 권력은 반드시 부패한다 — 그 견제의 주체는 ‘국민’이다.</p>
+      <div class="kill">▶ 혁파: 청원이 ‘읽씹’으로 끝나는 무응답의 정치</div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="big serif">이것은 한 사람의 분노가 아니라, <span class="r">‘다음 당신’</span>을 위한 청원입니다.</div>
+    <div class="line">함께 묻고, 함께 서명하십시오 — 면책의 나라를 끝낼 때까지.</div>
+    <div class="url">국민동의청원 petitions.assembly.go.kr · 공익 기록 touchi.oopy.io</div>
+  </div>
+
+  <div class="foot">
+    ※ 본 의견광고는 한 금융소비자 피해자(김성만)의 ‘문제제기’이며, 표현은 작성자의 주장·‘검토 쟁점’으로 특정 기관·개인의 유무죄를 단정하지 않습니다. 사법권 독립은 시민을 지키는 가치이며, 본 광고가 구하는 것은 ‘독립을 해치지 않으면서 명백한 직무유기에 책임을 묻는’ 제도 개선입니다. 게재·배포 전 변호사 검토를 권장합니다.
+  </div>
+
+</div>
+
+
+</body></html>
