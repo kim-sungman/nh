@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0481)file:///C:/Users/user/Desktop/7%EC%B0%A8-%EC%B5%9C%EC%A2%85%EC%A0%9C%EC%B6%9C%EC%84%9C%EB%A5%98%EC%B7%A8%ED%95%A8-8%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80-desktop/NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C-9%EB%85%84%EA%B0%84%EC%A2%85%EC%A7%80%EB%B6%80/%EB%B3%B5%EC%82%AC%ED%8C%90%EA%B2%B0_%EC%9D%98%EC%8B%AC_%EB%82%A0%EC%A7%9C%EB%B3%84_%ED%94%8C%EB%A1%9C%EC%9A%B0%EC%B0%A8%ED%8A%B8_2%EC%8B%AC_%EC%B0%B8%EA%B3%A0%EC%84%9C%EB%A9%B4_%EC%9C%84%EB%B2%95%ED%8C%90%EA%B2%B0_260629.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>복사판결 의심 — 날짜별 플로우차트</title>
+<style>
+  :root{
+    --bg:#0f1419; --panel:#171f29; --line:#2b3644; --txt:#e9eef5; --muted:#9fb0c3;
+    --blue:#3b82f6; --red:#e23b3b; --gold:#d4a72c; --green:#2e9e5b;
+    --redbg:#2a1316; --bluebg:#13202e; --goldbg:#241d10;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#0c1117,#0f1419);color:var(--txt);
+    font-family:"Noto Sans KR","Malgun Gothic",system-ui,sans-serif;line-height:1.55;padding:26px 18px 60px}
+  .wrap{max-width:920px;margin:0 auto}
+  header{text-align:center;border-bottom:2px solid var(--red);padding-bottom:16px;margin-bottom:8px}
+  header h1{margin:0;font-size:25px;letter-spacing:-.5px}
+  header h1 .hl{color:var(--red)}
+  header p{margin:8px 0 0;color:var(--muted);font-size:14px}
+  .case{display:inline-block;margin-top:10px;background:#1b2430;border:1px solid var(--line);border-radius:20px;padding:5px 14px;font-size:12.5px;color:var(--muted)}
+  .legend{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:18px 0 6px;font-size:12.5px;color:var(--muted)}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+  .summary{background:var(--redbg);border:1px solid var(--red);border-radius:14px;padding:14px 18px;margin:14px 0 26px}
+  .summary b{color:#ff8a76}
+  .summary .big{font-size:15px;font-weight:800;color:#ffd9d0}
+
+  .timeline{position:relative;margin-left:8px;padding-left:38px}
+  .timeline::before{content:"";position:absolute;left:14px;top:6px;bottom:30px;width:3px;
+    background:linear-gradient(180deg,var(--blue),var(--red) 40%,var(--gold) 75%);border-radius:3px}
+  .node{position:relative;margin-bottom:14px}
+  .dot{position:absolute;left:-31px;top:18px;width:20px;height:20px;border-radius:50%;
+    background:var(--blue);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--blue)}
+  .node.sus .dot{background:var(--red);box-shadow:0 0 0 2px var(--red);animation:pulse 1.8s infinite}
+  .node.judge .dot{background:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(226,59,59,.6)}70%{box-shadow:0 0 0 9px rgba(226,59,59,0)}100%{box-shadow:0 0 0 0 rgba(226,59,59,0)}}
+  .gap{margin:-6px 0 8px -2px;font-size:11.5px;color:var(--muted)}
+  .gap b{color:#ffcaa0}
+  .card{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:12px;padding:13px 16px}
+  .node.sus .card{border-left-color:var(--red);background:var(--redbg)}
+  .node.judge .card{border-left-color:var(--gold);background:var(--goldbg)}
+  .card .date{font-size:21px;font-weight:800;letter-spacing:-.5px}
+  .node.sus .card .date{color:#ff8a76}
+  .node.judge .card .date{color:#ffce5a}
+  .card .ev{font-size:14.5px;font-weight:700;margin:3px 0 6px}
+  .card .desc{font-size:13px;color:var(--muted)}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;margin-bottom:7px}
+  .tag.norm{background:#13202e;color:#7fb6ef;border:1px solid #244a6e}
+  .tag.sus{background:#3a161a;color:#ff8f7c;border:1px solid #6e2630}
+  .tag.judge{background:#332810;color:#ffd98a;border:1px solid #6e5a26}
+
+  .copylink{margin:6px 0 16px;padding:11px 15px;background:#241016;border:1px dashed var(--red);border-radius:10px;font-size:13px;color:#ffc7bd}
+  .copylink b{color:#ff8a76}
+  .concl{background:#101b14;border:1px solid var(--green);border-radius:14px;padding:16px 18px;margin-top:24px}
+  .concl h3{margin:0 0 8px;color:#74e0a0;font-size:16px}
+  .concl ul{margin:6px 0 0;padding-left:18px;color:var(--txt);font-size:13.5px}
+  .concl li{margin:5px 0}
+  .foot{margin-top:22px;color:var(--muted);font-size:11.5px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>‘추가서면(참고서면)’을 이용한 <span class="hl">위법 판결 의심</span> — 날짜별 플로우</h1>
+    <p>변론을 ‘종결’해 놓고, 그 뒤 한쪽(피고)의 서면을 받아 99% 복사해 판결했는가?</p>
+    <span class="case">2심 · 서울고법 2023나2052728 · 원고 김성만 v. NH투자증권 · (청구인 주장·검토 쟁점)</span>
+  </header>
+
+  <div class="legend">
+    <span><i style="background:#3b82f6"></i>정상 절차</span>
+    <span><i style="background:#e23b3b"></i>의심 절차</span>
+    <span><i style="background:#d4a72c"></i>판결 선고</span>
+  </div>
+
+  <div class="summary">
+    <div class="big">⏱ 변론종결(10/15) → 판결선고(11/07) = <b>23일</b>, 그 사이에 ‘끝난 변론’으로 일방 참고서면(10/28)이 들어와 판결문에 <b>99% 복사</b></div>
+    <div style="margin-top:6px;font-size:13px;color:#ffd9d0">변론종결 ‘후’에 석명명령으로 피고에게만 보충 기회를 주고, 그 보충서면을 그대로 옮겨 적은 정황 — ‘재판의 형식을 빌린 권리 박탈’ 의심.</div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="node">
+      <div class="dot"></div>
+      <div class="card">
+        <span class="tag norm">절차 종료</span>
+        <div class="date">2024. 10. 15.</div>
+        <div class="ev">변론 종결</div>
+        <div class="desc">양측의 주장·증거가 모두 마감됨. 원칙적으로 이후에는 새 서면·논리를 받지 않고 ‘이미 제출된 것’으로 판단해야 함.</div>
+      </div>
+    </div>
+
+    <div class="gap">↓ <b>8일</b> 경과 — ‘끝난 변론’ 뒤에 다시 문을 연 시점</div>
+
+    <div class="node sus">
+      <div class="dot"></div>
+      <div class="card">
+        <span class="tag sus">의심 ①</span>
+        <div class="date">2024. 10. 23.</div>
+        <div class="ev">석명준비명령 발령 (변론종결 後)</div>
+        <div class="desc">재판부가 변론을 종결한 뒤, <b>피고 측에만</b> 논리를 보충할 기회를 부여. 사실관계 보충용 석명권(민소 §136)을 ‘피고 승소 논리 완성 기회’로 쓴 정황 → 헌법 §27(공정한 재판) 위반 소지.</div>
+      </div>
+    </div>
+
+    <div class="gap">↓ <b>5일</b> 경과</div>
+
+    <div class="node sus">
+      <div class="dot"></div>
+      <div class="card">
+        <span class="tag sus">의심 ②</span>
+        <div class="date">2024. 10. 28.</div>
+        <div class="ev">피고(소제인 변호사) ‘참고서면’ 제출</div>
+        <div class="desc">‘인과관계 단절’ 논리(“원고가 매도 가능했으나 안 팔았다”)를 담은 추가 참고서면 제출. 이 문구가 곧 판결문의 핵심 논리가 됨.</div>
+      </div>
+    </div>
+
+    <div class="gap">↓ <b>1일</b> 경과</div>
+
+    <div class="node">
+      <div class="dot"></div>
+      <div class="card">
+        <span class="tag norm">원고 대응</span>
+        <div class="date">2024. 10. 29.</div>
+        <div class="ev">원고 내용증명 발송</div>
+        <div class="desc">소제인 변호사에게 “허위사실로 재판을 방해하면 형사고발하고 전 권리를 보호하겠다”고 경고하는 내용증명 발송.</div>
+      </div>
+    </div>
+
+    <div class="copylink">🔗 <b>의심 ③ — 99% 텍스트 복사:</b> 10/28 피고 참고서면 ➜ 11/07 판결문. ‘인과관계 단절’·‘더 큰 이익’ 프레임·‘69억/약 10억 상승’ 수치까지 토씨 일치(청구인 주장).</div>
+
+    <div class="gap">↓ <b>9일</b> 경과</div>
+
+    <div class="node judge">
+      <div class="dot"></div>
+      <div class="card">
+        <span class="tag judge">판결 선고</span>
+        <div class="date">2024. 11. 07.</div>
+        <div class="ev">2심 판결 선고 (항소 기각)</div>
+        <div class="desc">10/28 피고 참고서면의 텍스트를 99% 복사해 판결문 작성 의심. “이정미가 매도 가능 시점을 안내했으나 원고가 매도하지 않아 상당인과관계가 있다고 보기 어렵다.” + 청구하지도 않은 <b>6,630주(약 16억)</b>까지 미리 ‘인과 없음’으로 봉쇄.</div>
+      </div>
+    </div>
+
+    <div class="node sus">
+      <div class="dot"></div>
+      <div class="card">
+        <span class="tag sus">이후</span>
+        <div class="date">2025. 03. 13.</div>
+        <div class="ev">3심 심리불속행 기각 (확정)</div>
+        <div class="desc">상고심이 ‘이유’도 적지 않고 기각 → 복사판결 의혹의 실체 심리 자체를 회피한 정황(상고심절차특례법 §4).</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="concl">
+    <h3>🧭 무엇이 의심되는가 (3대 의심)</h3>
+    <ul>
+      <li><b>의심 ① 절차 역행</b> — 변론을 ‘종결’해 놓고, 그 뒤 피고에게만 보충 기회를 줌(석명권 남용).</li>
+      <li><b>의심 ② 일방 서면</b> — 그 기회로 들어온 피고 참고서면이 ‘인과관계 단절’ 결정타 논리를 제공.</li>
+      <li><b>의심 ③ 99% 복사</b> — 그 서면을 판결문이 토씨까지 옮겨 적고, 청구도 안 한 6,630주까지 선제 차단.</li>
+    </ul>
+    <div style="margin-top:10px;font-size:13.5px;color:#cfe9d8">→ ‘끝난 변론’ 뒤 일방 서면을 받아 복사한 것이 사실이라면, 이는 ‘판단’이 아니라 ‘직무 포기’이며 재심(민소 §451)·법관 책임의 쟁점이 됩니다.</div>
+  </div>
+
+  <div class="foot">
+    ⓘ 본 도식의 ‘복사·위법·직무유기’ 등은 모두 청구인(피해자)의 주장·‘검토 쟁점’이며 특정 법관의 유무죄를 단정하는 것이 아닙니다. 날짜·문구는 「복사판결 의혹 분석」·「판결문 회피표현 분석」 자료에 근거하며, 정확한 판결문 문구는 원본으로 대조해야 합니다. 재심·탄핵·국가배상 추진 시 변호사 검토를 권장합니다.
+  </div>
+</div>
+
+
+</body></html>
