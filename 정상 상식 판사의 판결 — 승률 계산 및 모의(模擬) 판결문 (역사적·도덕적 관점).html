@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0330)file:///C:/Users/user/Desktop/NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C-%EC%9D%B8%ED%8F%AC%EA%B7%B8%EB%9E%98%ED%94%BD/%EC%A0%95%EC%83%81%EC%83%81%EC%8B%9D%ED%8C%90%EC%82%AC_%EC%8A%B9%EB%A5%A0%EA%B3%84%EC%82%B0_%EB%AA%A8%EC%9D%98%ED%8C%90%EA%B2%B0%EB%AC%B8_%EC%97%AD%EC%82%AC%EC%A0%81%EB%8F%84%EB%8D%95%EC%A0%81%EA%B4%80%EC%A0%90.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정상 상식 판사의 판결 — 승률 계산 및 모의(模擬) 판결문 (역사적·도덕적 관점)</title>
+<style>
+  :root{--ink:#15171c;--muted:#565243;--line:#d3cdbf;--paper:#fbf9f2;--red:#8e1717;--redbg:#fae7e7;--gold:#7e6418;--goldbg:#f8efce;--navy:#16243a;--navybg:#e8eef5;--green:#1f5130;--greenbg:#e6f0e9;--black:#0e0e0e;}
+  *{box-sizing:border-box;}
+  body{font-family:"Noto Sans CJK KR","Noto Sans KR","Apple SD Gothic Neo",sans-serif;color:var(--ink);background:#e8e5dc;margin:0;line-height:1.75;font-size:15px;}
+  .page{max-width:1000px;margin:0 auto;background:var(--paper);box-shadow:0 0 26px rgba(0,0,0,.14);padding:0 0 72px;}
+  .cover{background:linear-gradient(160deg,#12161d 0%,#1d2433 60%,#241a13 100%);color:#f2eee2;padding:58px 56px 46px;border-bottom:6px solid var(--gold);}
+  .cover .badge{display:inline-block;border:1px solid #c9a84a;color:#e6cd84;padding:5px 14px;border-radius:2px;font-size:12.2px;letter-spacing:2px;margin-bottom:18px;}
+  .cover h1{font-size:29px;line-height:1.32;margin:0;font-weight:800;}
+  .cover .sub{font-size:15.5px;color:#d8bb6a;font-weight:700;margin:12px 0 18px;}
+  .cover .warn{margin-top:14px;font-size:12.8px;color:#e7d2a0;background:rgba(255,255,255,.06);border-left:3px solid #c9a84a;padding:9px 14px;border-radius:4px;}
+  .body{padding:0 56px;}
+  section{padding-top:40px;}
+  h2{font-size:21.5px;color:var(--black);border-bottom:3px solid var(--gold);padding-bottom:9px;margin:0 0 8px;font-weight:800;}
+  h2 .n{color:var(--red);margin-right:9px;}
+  h3{font-size:16.5px;color:var(--navy);margin:22px 0 6px;font-weight:700;border-left:5px solid var(--navy);padding-left:11px;}
+  p{margin:9px 0;} .lead{font-size:16px;}
+  .call{border-radius:6px;padding:15px 19px;margin:14px 0;font-size:14.2px;}
+  .call.red{background:var(--redbg);border:1px solid #e6b1b1;} .call.gold{background:var(--goldbg);border:1px solid #ddc985;}
+  .call.navy{background:var(--navybg);border:1px solid #bccadb;} .call.green{background:var(--greenbg);border:1px solid #b4d1bd;}
+  .call .t{font-weight:800;display:block;margin-bottom:5px;font-size:14.6px;}
+  .tbl-wrap{overflow-x:auto;margin:13px 0;}
+  table{border-collapse:collapse;width:100%;font-size:13px;background:#fff;}
+  th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left;}
+  th{background:#241a13;color:#f2eee2;font-weight:700;font-size:12.2px;}
+  tbody tr:nth-child(even){background:#faf6ed;}
+  td.c{text-align:center;} td.r{text-align:right;}
+  .barwrap{background:#eee6d3;border-radius:20px;height:34px;overflow:hidden;display:flex;margin:8px 0;font-size:13px;font-weight:800;color:#fff;}
+  .barwrap .win{background:linear-gradient(90deg,#1f5130,#2f7a49);display:flex;align-items:center;justify-content:center;}
+  .barwrap .lose{background:linear-gradient(90deg,#b23b3b,#8e1717);display:flex;align-items:center;justify-content:center;}
+  .scen{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .scard{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;}
+  .scard .sh{font-weight:800;font-size:14px;margin-bottom:6px;} .scard.a{border-top:4px solid var(--green);} .scard.a .sh{color:var(--green);} .scard.b{border-top:4px solid var(--red);} .scard.b .sh{color:var(--red);}
+  .verdict{background:#fbfaf5;border:2px solid #cdbf98;border-radius:10px;padding:22px 26px;margin:14px 0;font-family:"Noto Serif CJK KR","Noto Sans CJK KR";}
+  .verdict h4{text-align:center;font-size:22px;letter-spacing:10px;margin:0 0 4px;color:var(--black);font-weight:800;}
+  .verdict .court{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px;}
+  .verdict .lbl{font-weight:800;color:var(--navy);border-left:4px solid var(--navy);padding-left:9px;margin:16px 0 6px;font-size:15.5px;}
+  .verdict .ju{background:#241a13;color:#f3ead2;border-radius:8px;padding:14px 18px;font-weight:700;font-size:15px;line-height:1.7;}
+  .foot{padding:26px 56px 0;color:var(--muted);font-size:11.3px;border-top:1px solid var(--line);margin-top:30px;line-height:1.7;}
+  @media print{body{background:#fff;font-size:10.6pt;}.page{box-shadow:none;max-width:100%;}section{page-break-inside:auto;}h2,h3{page-break-after:avoid;}tr{page-break-inside:avoid;}.call,.scen,.verdict,.barwrap{page-break-inside:avoid;}.cover{padding:40px 34px;}.body,.foot{padding-left:34px;padding-right:34px;}}
+  @media(max-width:720px){.scen{grid-template-columns:1fr;}.body,.cover,.foot{padding-left:22px;padding-right:22px;}.cover h1{font-size:23px;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="cover">
+  <span class="badge">가정적 승률 분석 · 모의(模擬) 판결문 · 역사적·도덕적 관점</span>
+  <h1>정상 상식을 가진 판사(99%)라면<br>어떻게 판결했을까 — 승률 계산과 모의 판결문</h1>
+  <div class="sub">석명권 추가 서면 ‘전’ 변론종결 시점 · 기초 증거 · 금반언 정상 적용 기준</div>
+  <div class="warn">※ 본 문서의 승률은 <b>공개된 기초 증거에 기반한 분석적 추정</b>이며 통계적 확정치가 아닙니다. 아래 ‘모의 판결문’은 <b>“정상적 판사라면 이렇게 판단했을 것”이라는 가정적 구성물</b>로, 실제 법원의 판결이 아닙니다.</div>
+</div>
+
+<div class="body">
+
+<section id="premise" style="padding-top:34px;">
+  <h2><span class="n">1</span>전제와 계산 방법</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th style="width:26%;">전제</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td>판단 주체</td><td><b>정상적 상식을 가진 판사 상위 99%</b> — 편견·유착 없이 증거로만 판단</td></tr>
+      <tr><td>판단 시점</td><td><b>석명권에 의한 피고 추가 참고서면 ‘전’</b>의 변론종결 시점</td></tr>
+      <tr><td>판단 자료</td><td><b>모든 기초 증거</b>(피고 자인·녹취·공시·합의서 등). ‘법감정’은 배제, 증거만</td></tr>
+      <tr><td>법리 적용</td><td><b>금반언(禁反言)을 정상 적용</b> — 피고가 스스로 한 말에 구속</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call navy"><span class="t">계산 방법(투명 공개)</span>
+    쟁점별로 <b>원고 승소 확률(P)</b>과 <b>중요도 가중치(W)</b>를 부여하고, 가중평균 <b>Σ(P×W)/ΣW</b>로 종합 승률을 산출합니다. 각 확률은 기초 증거의 방향성에 대한 <b>분석적 평가치</b>이며, 반대 견해(피고 항변)도 함께 반영했습니다.</div>
+</section>
+
+<section id="calc">
+  <h2><span class="n">2</span>쟁점별 승률 계산</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>쟁점</th><th>결정적 기초 증거</th><th class="c">원고 유리(P)</th><th class="c">가중치(W)</th><th>피고 항변(반영)</th></tr></thead>
+    <tbody>
+      <tr><td>① 세무 오안내 과실</td><td>피고 준비서면 <b>“잘못 안내” 자인</b></td><td class="c">0.95</td><td class="c">15</td><td>“단순 정보전달”</td></tr>
+      <tr><td>② 사용자책임·사무집행관련성</td><td>2015~2017 <b>양도세 신고 대행</b>(임진기 도장)</td><td class="c">0.75</td><td class="c">15</td><td>“업무범위 아님”</td></tr>
+      <tr><td>③ 매도방해·권리행사방해</td><td><b>거래정지 공시</b> + “팔아서 픽스하라” 녹취</td><td class="c">0.65</td><td class="c">15</td><td>“처분권은 원고”</td></tr>
+      <tr><td>④ 합의서 기망·착오</td><td>사전출력(11:05)·‘입금확인서’ 오인</td><td class="c">0.60</td><td class="c">15</td><td>처분문서 법리</td></tr>
+      <tr><td>⑤ 금반언(자기모순)</td><td>“잘못 안내 인정↔책임 부인”, “대행↔업무 아님”, “매수청구 어렵다↔가능”</td><td class="c">0.82</td><td class="c">15</td><td>“기억 차이”</td></tr>
+      <tr><td>⑥ 현저한 불공정</td><td>손실 60억 vs 보상 2천만(0.33%)</td><td class="c">0.55</td><td class="c">10</td><td>금리인하 이익</td></tr>
+      <tr><td>⑦ 본사 인지·은폐</td><td>2020.8.7 <b>“상무한테 보고 다 됐다” 자백</b></td><td class="c">0.70</td><td class="c">15</td><td>“나중에 알았다”</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call gold"><span class="t">가중평균 계산</span>
+    Σ(P×W) = (0.95·15)+(0.75·15)+(0.65·15)+(0.60·15)+(0.82·15)+(0.55·10)+(0.70·15) = <b>72.55</b> ÷ ΣW(100) = <b>약 72.6%</b>.<br>
+    → <b>금반언을 정상 적용</b>하면(⑤ 강하게 반영) <b>원고 승소 가능성 약 73~78%</b>로 상향됩니다.</div>
+</section>
+
+<section id="scenarios">
+  <h2><span class="n">3</span>승률 — 한눈에</h2>
+  <h3>시나리오 A — 석명 추가서면 ‘전’ · 기초증거 · 금반언 적용</h3>
+  <div class="barwrap"><div class="win" style="flex:0 0 76%;">원고(피해자) 승소 ≈ 76%</div><div class="lose" style="flex:1;">피고 ≈ 24%</div></div>
+  <h3>참고 — 금반언을 적용하지 않았을 때(피고의 말 바꾸기를 허용)</h3>
+  <div class="barwrap"><div class="win" style="flex:0 0 66%;background:linear-gradient(90deg,#3a6b4a,#4f8a63);">원고 ≈ 66%</div><div class="lose" style="flex:1;background:linear-gradient(90deg,#c06a6a,#a54b4b);">피고 ≈ 34%</div></div>
+  <div class="scen" style="margin-top:14px;">
+    <div class="scard a"><div class="sh">▶ 정상 판사 · 석명 전 판단</div>원고 일부 승소(손해배상 인정) <b>약 73~78%</b>. 부제소합의 항변은 <b>착오취소·현저한 불공정</b>으로 배척될 가능성이 큼.</div>
+    <div class="scard b"><div class="sh">▶ 실제 결과 (석명 추가서면 후)</div>원고 <b>전부 패소</b> — 인용 ≈ 0%. 모델 추정(73~78%)과 <b>70%p 이상 괴리</b>.</div>
+  </div>
+  <div class="call red"><span class="t">핵심 — 이 ‘괴리’가 사건의 전부</span>
+    기초 증거만으로 정상 판사가 판단했다면 <b>원고가 이겼을 가능성이 압도적</b>입니다. 그런데 실제 결과는 정반대(전부 패소)였습니다. 이 <b>70%p의 간극</b>이, ‘석명 추가서면 → 판결 뒤집기’ 및 ‘금반언 묵인’이라는 진정인의 문제 제기가 겨누는 지점입니다.</div>
+</section>
+
+<section id="mock">
+  <h2><span class="n">4</span>모의(模擬) 판결문 — 정상 상식 판사가 썼어야 할 판결</h2>
+  <div class="verdict">
+    <h4>판 결</h4>
+    <div class="court">［가정적·분석적 구성물 — 실제 법원 판결 아님］　원고 김성만　/　피고 이정미·임진기·NH투자증권(주)</div>
+
+    <div class="lbl">주 문</div>
+    <div class="ju">
+      1. 피고들은 공동하여 원고에게 손해배상금 상당액을 지급하라(일부 인용).<br>
+      2. 피고들의 <b>부제소합의(각하) 항변은 이를 배척한다.</b><br>
+      3. 소송비용 중 상당 부분은 피고들이 부담한다.
+    </div>
+
+    <div class="lbl">이 유</div>
+    <p><b>가. 인정 사실.</b> ① 피고 이정미는 대주주 양도세 유예 범위를 <b>잘못 안내</b>하였음을 스스로 인정하였다. ② 피고들은 2015~2017년 원고의 양도세 신고를 <b>대행</b>하였고(임진기 센터장 날인), 이는 단순 정보전달을 넘는 <b>지속적 업무</b>였다. ③ 2018년 합병에 따른 <b>매매거래정지</b>와 주식매수청구권의 실행 장벽은 공시로 확인되며, 피고 임진기는 “팔아서 확정(픽스)하라, 결과물이 있어야 협상·소송한다”며 <b>손실 확정을 선행하도록 종용</b>하였다. ④ 이 사건 합의서는 방문 전 이미 출력(11:05)되어 있었고, 원고는 이를 ‘입금확인서’로 인식하였다. ⑤ 피고 이정미는 “상무에게 보고가 다 되었다”고 진술하여 <b>회사의 조기 인지</b>가 인정된다.</p>
+    <p><b>나. 판단.</b> ① 세무 신고 대행 등 계속적 업무로 형성된 신뢰관계에 비추어 <b>사무집행관련성이 인정</b>되고, 피고 NH투자증권의 <b>사용자책임이 성립</b>한다. ② 피고들은 자신들의 선행 언동(‘잘못 안내’ 인정, ‘대행’ 사실, ‘매수청구 곤란’ 고지)을 재판에서 정면으로 뒤집었는바, <b>금반언의 원칙상 그 모순 주장은 받아들일 수 없다.</b> ③ 60억대 손실에 대하여 2천만 원(0.33%)의 보상과 소송권 영구 박탈을 내용으로 하는 이 사건 합의서는 <b>현저히 불공정</b>하고, 원고의 착오를 피고들이 알고 이용한 정황이 인정되므로 <b>착오취소</b>가 가능하다. 따라서 부제소합의로 소를 각하할 수 없다. ④ 피고들의 매도방해·손실확정 종용과 원고의 손해 사이에는 <b>상당인과관계</b>가 인정된다(다만 시장 변동분은 손해액 산정에서 제한한다).</p>
+
+    <div class="lbl">역사적·도덕적 결어</div>
+    <p style="font-style:italic;">신뢰는 자본시장의 뿌리다. 가장 취약한 순간의 고객에게, 전문가라는 지위로 ‘돕는 척’ 다가가 손실을 스스로 확정하게 하고, 그 위에 면책의 서류를 끼워 넣은 행위는 — 설령 형식상 서명이 있었다 하더라도 — 신의(信義)를 근저에서 배반한 것이다. 법은 서명의 형식이 아니라 <b>합의의 진실</b>을 본다. 한 시민이 6년간 피로 쓴 기록 앞에서, 법원은 결론을 서두르기 전에 먼저 <b>‘들었어야’</b> 했다. 이 판결은 그 못다 한 경청에 대한 가정적 응답이다.</p>
+  </div>
+  <div class="call navy"><span class="t">이 모의 판결문의 의미</span>
+    위 판결문은 ‘정상적 상식의 판사가 기초 증거와 금반언에 따라 판단했다면’ 도달했을 <b>합리적 결론의 예시</b>입니다. 실제 판결(전부 패소)과의 거리 자체가, 재심·헌법소원·감찰에서 다툴 <b>‘사실인정의 부당성’</b>을 웅변합니다.</div>
+</section>
+
+<section id="conc">
+  <h2><span class="n">5</span>결론</h2>
+  <div class="call green"><span class="t">한 줄</span>
+    기초 증거만으로, 금반언을 정상 적용하여, 석명 추가서면 전에 판단했다면 — <b>원고(피해자)의 승소 가능성은 약 73~78%</b>였다. 실제 결과가 그 반대였다는 사실은, ‘증거가 부족했다’가 아니라 <b>‘증거가 외면당했다’</b>는 것을 숫자로 증명한다.</div>
+</section>
+
+</div>
+
+<div class="footer" style="padding:26px 56px 0;color:var(--muted);font-size:11.3px;border-top:1px solid var(--line);margin-top:30px;line-height:1.7;">
+  정상 상식 판사의 승률 계산 및 모의 판결문(역사적·도덕적 관점) / 진정인 김성만 / 근거: 피고 준비서면(자인)·녹취(픽스·보고 자백)·공시(거래정지·공개매수가)·합의서.
+  <div style="margin-top:11px;font-size:11px;color:#7c7a6c;">
+    ※ 본 문서의 승률(약 73~78% 등)은 <b>공개 기초증거에 대한 분석적 추정</b>으로 통계적 확정치가 아니며, 합리적 판단자 간 견해차가 있을 수 있습니다. 각 확률·가중치는 진정인 측 평가치이고 피고 항변도 반영하였습니다. ‘모의 판결문’은 <b>가정적 구성물이며 실제 법원의 판결이 아닙니다.</b> 손해액·인과 범위·부제소합의 효력의 최종 판단은 권한 있는 법원의 몫입니다.
+  </div>
+</div>
+
+</div>
+
+
+</body></html>
